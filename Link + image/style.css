@@ -1,0 +1,35 @@
+a:link {
+	color: black;
+}
+a:visited {
+	color: red;
+}
+a:hover {
+	color: blue;
+}
+a:active {
+	color: green;
+}
+.a1 {
+	text-align: center;
+}
+img {
+	width: 250px;
+	height: 250px;
+	display: block;
+	margin: auto;
+	-moz-transition: all 1s;
+	-webkit-transition: all 1s;
+}
+img:hover {
+	transform: scale(1.1);
+}
+
+p {
+	height: 5px;
+}
+h1 {
+	font-size: 80px;
+	font-family: cursive;
+	text-align: center;
+}
