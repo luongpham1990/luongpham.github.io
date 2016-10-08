@@ -72,106 +72,113 @@
                         <?php
                         $user = [
                             'name' => 'luongpham',
-                            'email' => 'luongpham@gmail.com',
+                            'email' => 'luongpham1990@gmail.com',
                             'username' => 'luongpham',
-                            'password' => '123465',
-                            'repassword' => '123456',
-                            'birthday' => '07/01/1990',
+                            'pass' => '123456',
+                            'repass' => '123456',
+                            'birthday' => '1990-07-01',
                             'gender' => '1',
                             'account' => '4',
                             'phone' => '987654321',
                         ]
                         ?>
                     </div>
-                    <?php if (!empty($_POST)):?>
+                    <?php if (!empty($_POST)): ?>
                         <?php
                         echo "<pre>";
                         var_dump($_POST);
+                        var_dump($user);
                         echo "</pre>";
                         $name = $_POST["name"];
-                        $name = $_POST["email"];
-                        $name = $_POST["username"];
-                        $name = $_POST["password"];
-                        $name = $_POST["repassword"];
-                        $name = $_POST["birthday"];
-                        $name = $_POST["gender"];
-                        $name = $_POST["account"];
-                        $name = $_POST["phone"];
+                        $email = $_POST["email"];
+                        $username = $_POST["username"];
+                        $pass = $_POST["pass"];
+                        $repass = $_POST["repass"];
+                        $birthday = $_POST["birthday"];
+                        $gender = $_POST["gender"];
+                        $account = $_POST["account"];
+                        $phone = $_POST["phone"];
 
-                        if ($user["name"] == $_POST["name"]
-                            && $user["email"] == $_POST["email"]
-                            && $user["username"] == $_POST["username"]
-                            && $user["password"] == $_POST["password"]
-                            && $user["repassword"] == $_POST["repassword"]
-                            && $user["birthday"] == $_POST["birthday"]
-                            && $user["gender"] == $_POST["gender"]
-                            && $user["account"] == $_POST["account"]
-                            && $user["phone"] == $_POST["phone"]
+                        if ($user["name"] == $name
+                            && $user["email"] == $email
+                            && $user["username"] == $username
+                            && $user["pass"] == $pass
+                            && $user["repass"] == $repass
+                            && $user["birthday"] == $birthday
+                            && $user["gender"] == $gender
+                            && $user["account"] == $account
+                            && $user["phone"] == $phone
                         ) {
-                            echo "<h1>Vào rồi nhé</h1>";
-                    } else {
+                            echo "<h1>Wellcome <strong>$username</strong> to tiên giới</h1>";
+                        } else {
                             echo "<h1>Xịt rồi nhé</h1>";
                         }
                         ?>
-                        <?php else: ?>
-                    <div class="panel-body">
-                        <form action="" method="post"  role="form">
-                            <div class="form-group">
-                                <label for="name">Name </label>
-                                <input type="text" class="form-control" name="name" id="name"
-                                       placeholder="First and last name" minlength="6"
-                                       maxlength="15" required autofocus>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email </label>
-                                <input type="email" class="form-control" name="email" id="email" placeholder="email"
-                                       required>
-                            </div>
-                            <div class="form-group">
-                                <label for="username">Username </label>
-                                <input type="text" class="form-control" name="username" id="username"
-                                       placeholder="Username" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Password </label>
-                                <input type="password" class="form-control" name="password" id="password"
-                                       placeholder="password" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="repassword">Re Password </label>
-                                <input type="password" class="form-control" name="repassword" id="repassword"
-                                       placeholder="re-password" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="birthday">Ngày sinh </label>
-                                <input type="date" class="form-control" name="birthday" id="birthday"
-                                       placeholder="Ngày sinh" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="gender">Giới tính </label>
-                                <select name="gender" id="gender" required>
-                                    <option value="1">Nam</option>
-                                    <option value="2">Nữ</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="" class="">Account Type</label> <br>
-                                   <label class="radio-inline">
-                                       <input name="account" type="radio" value="1" checked> Free
-                                   </label>
-                                   <label class="radio-inline"> <input name="account" type="radio" value="2">Vip 1</label>
-                                    <label class="radio-inline"><input name="account" type="radio" value="3">Vip 2</label>
-                                    <label class="radio-inline"><input name="account" type="radio" value="4">Vip 3</label>
-                            </div>
-                            <div class="form-group">
-                                <label for="address">Phone </label>
-                                <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone">
-                            </div>
-                            <button type="submit" class="btn btn-default">Submit</button>
-                            <button type="reset" class="btn btn-default">Reset</button>
-                        </form>
-                    </div>
-                    <?php
+                    <?php else: ?>
+                        <div class="panel-body">
+                            <form action="" method="post" role="form" class="form-group">
+                                <div class="form-group">
+                                    <label for="name">Name </label>
+                                    <input type="text" class="form-control" name="name" id="name"
+                                           placeholder="First and last name" minlength="6"
+                                           maxlength="15" required autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email </label>
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="email"
+                                           required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="username">Username </label>
+                                    <input type="text" class="form-control" name="username" id="username"
+                                           placeholder="Username" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pass">Password </label>
+                                    <input type="password" class="form-control" name="pass" id="pass"
+                                           placeholder="password" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="repass">Re Password </label>
+                                    <input type="password" class="form-control" name="repass" id="repass"
+                                           placeholder="re-password" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="birthday">Ngày sinh </label>
+                                    <input type="date" class="form-control" name="birthday" id="birthday"
+                                           placeholder="Ngày sinh" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="gender">Giới tính </label>
+                                    <select name="gender" id="gender" required>
+                                        <option name="gender" value="1">Nam</option>
+                                        <option name="gender" value="2">Nữ</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="">Account Type</label> <br>
+                                    <label class="radio-inline">
+                                        <input name="account" type="radio" value="1" checked> Free
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input name="account" type="radio" value="2">Vip 1
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input name="account" type="radio" value="3">Vip 2
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input name="account" type="radio" value="4">Vip 3
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Phone </label>
+                                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone">
+                                </div>
+                                <button type="submit" class="btn btn-default">Submit</button>
+                                <button type="reset" class="btn btn-default">Reset</button>
+                            </form>
+                        </div>
+                        <?php
                     endif;
                     ?>
                 </div>
